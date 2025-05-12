@@ -1,0 +1,279 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+    color: #f5f5dc; /* Color "cream" */
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .fondo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -10;
+    filter: brightness(0.45);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .logo img {
+    width: 100px;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .nav a {
+    color: #f5f5dc;
+    text-decoration: none;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  @media (min-width: 768px) {
+    .contenido {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  
+    .logo img {
+      width: 128px;
+    }
+  }
+  
+  .texto {
+    max-width: 600px;
+  }
+  
+  .texto h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .texto h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .texto h2 span {
+    font-weight: 900;
+  }
+  
+  .texto hr {
+    width: 4rem;
+    border: 1px solid #f5f5dc;
+    margin-bottom: 1rem;
+  }
+  
+  .texto p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+  
+  .subrayado {
+    text-decoration: underline;
+  }
+  
+  .botones {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .botones a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(245, 245, 220, 0.9);
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .botones a:hover {
+    background-color: #f5f5dc;
+  }
+  
+  .botones img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .imagen-app img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    
+  }
+
+  .servicios-contenedor {
+    background-color: #002857;
+    
+    max-width: 1500px;
+
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .servicios-contenedor {
+      flex-direction: row;
+      padding: 3rem;
+      gap: 5rem;
+    }
+  }
+  
+  .servicios-texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .servicios-titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .servicios-titulo {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .servicios-parrafo {
+    font-size: 0.9rem;
+    max-width: 400px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .servicios-parrafo {
+      font-size: 1rem;
+    }
+
+
+  }
+  
+  .servicios-boton {
+
+    background-color: #003a6f;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s;
+    width: max-content;
+  }
+  
+  @media (min-width: 768px) {
+    .servicios-boton {
+      font-size: 0.875rem;
+    }
+  }
+  
+  .servicios-boton:hover {
+    background-color: #002a4f;
+  }
+  
+  .servicios-icono {
+    width: 12px;
+    height: 12px;
+  }
+  
+  @media (min-width: 768px) {
+    .servicios-icono {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  
+  .servicios-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    max-width: 600px;
+  }
+  
+  .servicios-item {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .servicios-numero {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+  
+  @media (min-width: 768px) {
+    .servicios-numero {
+      font-size: 3rem;
+    }
+  }
+  
+  .servicios-descripcion {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    .servicios-descripcion {
+      font-size: 0.875rem;
+    }
+  }
+  
